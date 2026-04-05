@@ -13,8 +13,9 @@ export default function CTA() {
 
   return (
     <section className="w-full py-16 md:py-20 relative overflow-hidden bg-background">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,var(--accent)_0%,transparent_50%)] opacity-5" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,var(--primary)_0%,transparent_50%)] opacity-5" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,#8b3a3a_0%,transparent_40%)] opacity-12 dark:bg-[radial-gradient(circle_at_20%_30%,#4a2c2a_0%,transparent_40%)] dark:opacity-15" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,#a04848_0%,transparent_45%)] opacity-10 dark:bg-[radial-gradient(circle_at_80%_70%,#6b3e3e_0%,transparent_45%)] dark:opacity-12" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#944444_0%,transparent_50%)] opacity-8 dark:bg-[radial-gradient(circle_at_50%_50%,#5c3838_0%,transparent_50%)] dark:opacity-10" />
       <div className="container mx-auto px-6 md:px-12 relative">
         <div className="max-w-4xl mx-auto">
           <div className="border border-white/10 backdrop-blur-xl bg-white/5 dark:bg-white/5 rounded-2xl p-12 md:p-16 text-center space-y-8">
