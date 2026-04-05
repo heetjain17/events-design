@@ -91,7 +91,7 @@ export default function FeaturedWorkCarousel({ items }: FeaturedWorkCarouselProp
                   >
                     {item.title}
                   </motion.h3>
-                  <button className="px-6 py-3 w-fit text-sm bg-primary text-white rounded-lg hover:scale-105 transition duration-200">
+                  <button className="px-6 py-3 w-fit text-sm bg-primary text-primary-foreground rounded-lg hover:scale-105 transition duration-200">
                     {item.button}
                   </button>
                 </div>
