@@ -1,5 +1,4 @@
 import Navbar from "./Navbar"
-import Spacer from "@/components/ui/spacer"
 import Hero from "./Hero"
 import Identity from "./Identity"
 import Services from "./Services"
@@ -13,7 +12,6 @@ export default function Home() {
   return (
     <main className="w-full">
       <Navbar />
-      <Spacer size="navbar" />
       <Hero />
       <Identity />
       <Services />

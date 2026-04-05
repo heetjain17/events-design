@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { IconMenu2, IconX } from "@tabler/icons-react"
 import Link from "next/link"
+import { ModeToggle } from "@/components/ui/theme-toggle"
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -25,26 +26,18 @@ export default function Navbar() {
   ]
 
   return (
-    <motion.nav
-      className="fixed top-0 left-0 right-0 z-50 w-full"
-      initial={{ backgroundColor: "transparent" }}
-      animate={{
-        backgroundColor: isScrolled ? "hsl(var(--background) / 0.8)" : "transparent",
-        borderBottomWidth: isScrolled ? "1px" : "0px",
-        borderBottomColor: isScrolled ? "hsl(var(--border))" : "transparent",
-      }}
-      transition={{ duration: 0.3 }}
-      style={{
-        backdropFilter: isScrolled ? "blur(12px)" : "none",
-      }}
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
+        isScrolled ? "bg-background/60 backdrop-blur-md border-b border-white/10" : "bg-transparent"
+      }`}
     >
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          <Link href="/" className="font-heading text-xl md:text-2xl text-foreground">
+      <div className="container mx-auto px-4 md:px-8">
+        <div className="flex items-center max-w-7xl mx-auto justify-between h-14 md:h-16">
+          <Link href="/" className="font-heading text-lg md:text-xl text-foreground">
             LOGO
           </Link>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.label}
@@ -57,19 +50,24 @@ export default function Navbar() {
 
             <a
               href="#contact"
-              className="bg-primary text-primary-foreground px-6 py-2 rounded font-sans font-medium text-sm md:text-base transition-opacity duration-200 hover:opacity-90"
+              className="border border-white/20 bg-white/5 backdrop-blur-sm dark:text-white text-black/90 px-4 py-2 text-sm rounded-sm hover:bg-white/10 transition-all duration-200"
             >
               Contact
             </a>
+
+            <ModeToggle />
           </div>
 
-          <button
-            className="md:hidden text-foreground"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? <IconX size={24} /> : <IconMenu2 size={24} />}
-          </button>
+          <div className="md:hidden flex items-center gap-4">
+            <ModeToggle />
+            <button
+              className="text-foreground"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? <IconX size={24} /> : <IconMenu2 size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -104,6 +102,6 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.nav>
+    </nav>
   )
 }

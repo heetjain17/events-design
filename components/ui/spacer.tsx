@@ -1,8 +1,8 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
 interface SpacerProps {
-  size?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "navbar";
-  className?: string;
+  size?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "navbar"
+  className?: string
 }
 
 const sizeMap = {
@@ -12,9 +12,9 @@ const sizeMap = {
   lg: "h-24",
   xl: "h-32",
   "2xl": "h-48",
-  navbar: "h-16 md:h-20",
-};
+  navbar: "h-14 md:h-16",
+}
 
 export default function Spacer({ size = "md", className }: SpacerProps) {
-  return <div className={cn(sizeMap[size], className)} />;
+  return <div className={cn(sizeMap[size], className)} />
 }
