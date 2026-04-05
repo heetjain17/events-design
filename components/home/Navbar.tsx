@@ -42,7 +42,7 @@ export default function Navbar() {
               <a
                 key={link.label}
                 href={link.href}
-                className="font-sans text-sm md:text-base text-foreground transition-opacity duration-200 hover:opacity-70"
+                className="font-sans text-sm md:text-base text-foreground hover:text-primary transition-colors duration-200"
               >
                 {link.label}
               </a>
@@ -50,7 +50,7 @@ export default function Navbar() {
 
             <a
               href="#contact"
-              className="border border-white/20 bg-white/5 backdrop-blur-sm dark:text-white text-black/90 px-4 py-2 text-sm rounded-sm hover:bg-white/10 transition-all duration-200"
+              className="border border-white/20 bg-white/5 backdrop-blur-sm dark:text-white text-black/90 px-4 py-2 text-sm rounded-lg hover:bg-white/10 transition-all duration-200"
             >
               Contact
             </a>
@@ -85,7 +85,7 @@ export default function Navbar() {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="font-sans text-base text-foreground py-2"
+                  className="font-sans text-base text-foreground hover:text-primary transition-colors duration-200 py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
@@ -93,7 +93,7 @@ export default function Navbar() {
               ))}
               <a
                 href="#contact"
-                className="bg-primary text-primary-foreground px-6 py-3 rounded font-sans font-medium text-base text-center"
+                className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-sans font-medium text-base text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact

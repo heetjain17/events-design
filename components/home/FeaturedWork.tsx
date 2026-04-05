@@ -38,7 +38,7 @@ const featuredEvents = [
 
 export default function FeaturedWork() {
   return (
-    <section className="w-full py-24 md:py-32 bg-background">
+    <section className="w-full py-16 md:py-20">
       <div className="container mx-auto px-6 md:px-12 mb-16">
         <motion.div
           className="max-w-3xl mx-auto text-center"

@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 export default function Philosophy() {
   return (
-    <section className="relative w-full py-24 md:py-32 overflow-hidden bg-background">
+    <section className="relative w-full py-16 md:py-20 overflow-hidden bg-background">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,var(--accent)_0%,transparent_50%)] opacity-5" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,var(--primary)_0%,transparent_50%)] opacity-5" />
 

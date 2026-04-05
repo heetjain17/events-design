@@ -112,7 +112,7 @@ export default function Hero() {
 
             <motion.a
               href="#contact"
-              className="inline-block border border-white/20 bg-white/5 backdrop-blur-md dark:text-white text-black/90 px-6 py-3 rounded-sm hover:bg-white/10 transition-all duration-200 mt-2"
+              className="inline-block border border-white/20 bg-white/5 backdrop-blur-md dark:text-white text-black/90 px-6 py-3 rounded-lg hover:bg-white/10 transition-all duration-200 mt-2"
               whileHover={{ scale: 1.05 }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

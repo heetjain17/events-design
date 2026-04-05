@@ -36,7 +36,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="w-full py-24 md:py-32 bg-background">
+    <section className="w-full py-16 md:py-20">
       <div className="container mx-auto px-6 md:px-12">
         <motion.div
           className="max-w-3xl mx-auto text-center mb-16"
@@ -55,7 +55,7 @@ export default function Services() {
           {services.map((service, index) => (
             <motion.div
               key={service.title}
-              className={`relative ${service.gridClass} ${service.height} rounded-sm overflow-hidden group cursor-pointer border border-white/10`}
+              className={`relative ${service.gridClass} ${service.height} rounded-xl overflow-hidden group cursor-pointer border border-white/10`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}

@@ -58,7 +58,7 @@ export default function FeaturedWorkCarousel({ items }: FeaturedWorkCarouselProp
               onClick={() => carouselApi?.scrollTo(index)}
             >
               <motion.div
-                className="relative h-[70vmin] w-full rounded-sm overflow-hidden group cursor-pointer"
+                className="relative h-[70vmin] w-full rounded-xl overflow-hidden group cursor-pointer"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -91,7 +91,7 @@ export default function FeaturedWorkCarousel({ items }: FeaturedWorkCarouselProp
                   >
                     {item.title}
                   </motion.h3>
-                  <button className="px-6 py-3 w-fit text-sm bg-primary text-white rounded hover:scale-105 transition duration-200">
+                  <button className="px-6 py-3 w-fit text-sm bg-primary text-white rounded-lg hover:scale-105 transition duration-200">
                     {item.button}
                   </button>
                 </div>
